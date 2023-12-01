@@ -37,13 +37,31 @@
         }
         .gender{
             display:flex;
+            flex-direction: row;
+        }
+            
+        .container{
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .item-left{
+            background-color: aquamarine;
             
         }
+        .item-Right{
+            background-color: red;
+        }
+            
     </style>
 </head>
 <body>
      <!---ส่วนที่แสดงออกไปทางหน้าจอของ  Browser -->
      <!--3.form-->
+     <div class="container">
+        <div class="item-left">Left</div>
+        <div class="item-Right">Right</div>
+     </div>
      <div id ="register">Register form</div>
     <span class="header-form">ชื่อจริง</span>
     <input class="form" type="text">
