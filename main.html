@@ -4,22 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /*สิ่งที่อยู่ตรงนี้ จะมีไว้แค่ให้ dev อ่าน  */
+        /*1. id,class,DOM* 2.จะแต่งอะไร  */
+        @font-face{
+            font-family: 'Kanit';
+            src: url(./Kanit/Kanit-Italic.ttf);
+        }
+
+        body {
+            font-family: 'Kanit'
+        }
+        #register{
+            font-size: 50x;
+            color:  blue;
+            font-weight: 800;
+            padding-top: 10px; /*เว้นระยะห่างด้านบนในกรอบ*/
+            padding-bottom: 10px; /*เว้นระยะห่างด้านล่างในกรอบ*/
+            margin-top: 10px; /*ระยะห่างของข้อความกับขอบบน*/
+            margin-bottom: 10px;/*ระยะห่างของข้อความกับขอบล่าง*/
+            margin-left: 20px; /*ระยะห่างของข้อความกับขอบซ้าย*/
+            background-color: aquamarine;
+            border: 1px black solid; 
+
+        }
+        .form{
+        border: 1px solid red;
+        display: block; 
+        }
+        .header-form{
+            font-weight: 800;
+        }
+        .gender{
+            display: inline-block;
+            height: 100px;
+        }
+    </style>
 </head>
 <body>
      <!---ส่วนที่แสดงออกไปทางหน้าจอของ  Browser -->
-     <h1>Register form</h1>
-    ชื่อจริง<input type="text">
-    นามสกุล<input type="text"> <br>
-    อายุ<input type="number" min="0" max="100"> 
+     <!--3.form-->
+     <div id ="register">Register form</div>
+    <span class="header-form">ชื่อจริง</span>
+    <input class="form" type="text">
+
+    <span class="header-form">นามสกุล</span>
+    <input class="form" type="text"> <br>
+    <span class="header-form">อายุ</span>
+    <input class="form" type="number" min="0" max="100"> 
     <div>
-    เพศ
-    <div>
+    เพศ 
+    <div class="gender">
         <input name="gender" type="radio">ชาย
     </div>
-    <div>
+    <div class="gender">
         <input name="gender" type="radio">หญิง
     </div>
-    <div>
+    <div class="gender">
         <input name="gender" type="radio">ไม่ระบุ
  </div>
 </div>
