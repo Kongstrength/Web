@@ -8,98 +8,112 @@
         /*สิ่งที่อยู่ตรงนี้ จะมีไว้แค่ให้ dev อ่าน  */
         /*1. id,class,DOM* 2.จะแต่งอะไร  */
         @font-face{
-            font-family: 'Kanit';
-            src: url(./Kanit/Kanit-Italic.ttf);
+            font-family:'Kanit';
+            src: url(./Kanit/Kanit-Regular.ttf);
+            font-weight: bold;
         }
 
-        body {
-            font-family: 'Kanit'
+        html{
+            font-size: 16px;
         }
+
+        body{
+            font-family: 'Kanit', sans-serif;
+            background-color: rgb(201, 197, 197);
+            font-size: 14px;
+        }
+
         #register{
-            font-size: 50x;
-            color:  blue;
-            font-weight: 800;
-            padding-top: 10px; /*เว้นระยะห่างด้านบนในกรอบ*/
-            padding-bottom: 10px; /*เว้นระยะห่างด้านล่างในกรอบ*/
-            margin-top: 10px; /*ระยะห่างของข้อความกับขอบบน*/
-            margin-bottom: 10px;/*ระยะห่างของข้อความกับขอบล่าง*/
-            margin-left: 20px; /*ระยะห่างของข้อความกับขอบซ้าย*/
-            background-color: aquamarine;
-            border: 1px black solid; 
+           font-size: 2rem;
+        }
+            
 
-        }
-        /*.form{ 
-        border: 1px solid red;
-        display: block; 
-        }*/
-        .header-form{
-            font-weight: 800;
-        }
         .gender{
             display:flex;
             flex-direction: row;
         }
-            
+
         .container{
-            display: flex;
-            flex-direction: row;
-        }
-        
-        .item-left{
-            background-color: aquamarine;
-            flex: 1;
-            
-        }
-        .item-Right{
-            background-color: red;
-            flex: 2;
-        }
-        .grid-container{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr ;
 
+            width: 400px; 
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgb(224, 224, 20);
         }
 
+        .header{
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .header-form{
+            font-weight: 800;
+        }
+        .header-form{
+            width: 150px;
+        }
+        .flex{
+            display:flex;
+        }
+        .form-input{
+            margin-bottom:5px;
+        }
+        input.form,textarea{
+            border: 1px;
+            width:100%;
+        }
+       .center{
+        text-align: center;
+       }
+        .button{
+            background-color: rgb(24, 240, 255);
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
         
-            
+       
+
     </style>
 </head>
 <body>
      <!---ส่วนที่แสดงออกไปทางหน้าจอของ  Browser -->
+     <div class="box"></div>
      <!--3.form-->
-     <div class="container">
-        <div class="item-left">Left</div>
-        <div class="item-Right">Right</div>
-     </div>
-     <div class="grid-container">
-        <div class="grid-item">item1</div>
-        <div class="grid-item">item2</div>
-        <div class="grid-item">item3</div>
-        <div class="grid-item">item4</div>
-     </div>
-     <div id ="register">Register form</div>
-    <span class="header-form">ชื่อจริง</span>
-    <input class="form" type="text">
+    <div class="container">
+    <div class="header">
 
-    <span class="header-form">นามสกุล</span>
-    <input class="form" type="text"> <br>
-    <span class="header-form">อายุ</span>
+     <div id ="register">Register form</div>
+        <div class="flex form-input">
+        <div class="header-form">ชื่อจริง</div>
+        <input class="form" type="text">
+    </div>
+
+    <div class="flex form-input">
+    <div class="header-form">นามสกุล</div>
+    <input class="form" type="text">
+    </div>
+    
+    <div class="flex form-input">
+    <div class="header-form">อายุ</div>
     <input class="form" type="number" min="0" max="100"> 
-    <div>
+    </div>
+
+<div>   
     เพศ 
-    <div class="gender">
+    <div>
         <input name="gender" type="radio">ชาย
-    </div>
-    <div class="gender">
         <input name="gender" type="radio">หญิง
-    </div>
-    <div class="gender">
         <input name="gender" type="radio">ไม่ระบุ
+    </div>
  </div>
+
 </div>
 <div>
     สิ่งที่สนใจ
-    <div>
+    <div class="form-input">
         <input name="interest" type="checkbox">หนังสือ
     </div>
     <div>
@@ -113,7 +127,9 @@
         คำอธิบายตัวตนเพิ่มเติม
         <textarea></textarea>
     </div>
-    <button>ส่งข้อมูล</button>
-    
+    <div class="center">
+        <button class="button">ส่งข้อมูล</button>
+    </div>
+
 </body>
 </html>
