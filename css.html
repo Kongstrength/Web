@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container .item{
+            background-color: red;
+        }
+        .footer-container .item{
+            background-color: blue;
+        }
+        .main-container .item{
+            background-color: green;
+            padding: 10px;
+        }
+        .button{
+            background-color: yellow;
+            border: 0;
+            padding: 10px;
+        }
+        .button.active{
+            background-color: green
+            
+        }
+        .button.danger{
+            background-color: red;
+        }
+          .item1 + .item2{
+            background-color: green;
+        }
+        input[type="text"]{
+            background-color: red;
+            border: 1;
+            height: 100px;  
+        }
+    </style>
+</head>
+<body>
+    <!--1. item เป็นลูกของ Container -->
+    <div class ="container">
+        Container
+    <div class ="item">
+        item
+    </div>
+</div>       
+   <div class =footer-container>
+    Container
+   <div class = "item">
+    item
+   </div>
+</div> 
+    
+<!--- 2. item เป็นลูกของ container แค่ชั้นเดียว-->
+<div class ="main-container">
+    Container
+    <div class = "item">
+        item
+        </div>
+        <div class =item>
+            item1
+        </div>
+        <div class =item>
+            item2
+        </div>
+        <div class =item>
+            item3
+        </div>
+    </div>
+</div>
+<!---3. มี class ติดกัน-->
+     <button class ="button">ปุ่ม</button>
+     <button class ="button active ">ปุ่ม</button>
+     <button class ="button danger">ปุ่ม</button>
+     <!--4. เพื่อนกัน adjacent-->
+     <div class="item1">Item1</div>
+     <div class="item2">Item2</div>
+     
+     
+     <!--5. attribute selector-->
+     <input type="text" name="firstname">
+     <input type="text" name="lastname">
+     <input type="text" name="age">
+
+</body>
+</html>

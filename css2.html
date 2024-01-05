@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tom{
+        color: blue;
+        }
+        .tom::first-letter{
+            color: red;
+            font-size: 40px;
+        }
+        .tom::before{
+            content: "?";
+        }
+        .tom::after{
+            content: "!";
+        }
+        .smile::after{
+            content: '✌️';
+        }
+    </style>
+</head>
+<body>
+    <div class="tom smile">TestTom</div>
+</body>
+</html>

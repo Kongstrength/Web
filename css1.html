@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .button{
+        border : 0;
+        padding: 20px;
+        background-color: grey;
+    }
+    .button:hover{
+        background-color: royalblue;
+    }
+    .button:active{
+        background-color: red;
+    }
+    .button:focus{
+        background-color: yellow;
+    }
+    input:focus{
+        background-color: yellow;
+    }
+    .container .item:first-child{
+        background-color: red;
+    }
+    .container .item:nth-child(2){
+        background-color: green;
+    }
+    .container .item:last-child{
+        background-color: blue;
+    }
+</style>
+</head>
+</body>
+<input type="text">
+<button class="button">ปุ่ม</button>
+<div class ="container">
+    <div class="item">1</div>
+    
+    <div class="item">2</div>
+    <div class="item">3</div>
+</div>
+</html>
