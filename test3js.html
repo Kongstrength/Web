@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Hello World</div>
+    ความสนใจ
+    <input type="checkbox"  name = "interest" value="หนังสือ">หนังสือ
+    <input type="checkbox"  name = "interest" value="เพลง">เพลง
+    <input type="checkbox"  name = "interest" value="กีฬา">กีฬา
+    <script>
+        let checkboxInput = document.querySelectorAll('input[name=interest]');
+        for (let i = 0; i < checkboxInput.length; i++){
+            console.log('ckeckbox value',checkboxInput[i].value);
+        }
+    </script>
+</body>
+</html>

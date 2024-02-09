@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Hello World</div>
+    ชื่อจริง<input 
+    id = "firstname"
+    class = "input" 
+    type="text"
+    name="firstname"
+    value="ทดสอบ">
+    นามสกุล<input 
+    id = "lastname"
+    class ="input" 
+    type="text"
+    name="firstname"
+    value="นามสกุล">
+    <script>
+        let inputsDOM = document.getElementByClassname('input');
+        for (let i = 0; i < inputsDOM.length;i++){
+            console.log(inputsDOM[i].value);
+        }
+
+        console.log(inputsDOM.value);
+    </script>
+</body>
+</html>
