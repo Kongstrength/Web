@@ -1,0 +1,20 @@
+#install mysql2
+npm  install mysql2 
+#ดึง nginx,mysql,phpmyadmin 
+docker pull nginx
+docker pull mysql:5.7 
+docker pull phpmyadmin/phpmyadmin
+
+รัน container
+docker run --name mysql_db --network weblab820 -p 8820:3306 -e MYSQL_ROOT_PASSWORD=1111 -e MYSQL_DATABASE=webdb -e MYSQL_USER=wordpress -e MYSQL_PASSWORD=wordpress -d mysql:5.7
+docker run --name pma --network weblab820 -p 8821:80 -e PMA_ARBITRARY=1 -d phpmyadmin/phpmyadmin
+
+ดูข้อมูลใน network
+docker network ls
+สร้าง network weblab820
+docker create network weblab820
+รวมไฟล์เป็นไฟล์เดอร์ชื่อ server
+docker compose up -d
+
+run backend 
+npx nodemon index.js
