@@ -38,7 +38,7 @@ app.get('/users',async (req, res) => {
 app.post('/users',async (req, res) => {
   try {
     let user = req.body;
-    
+    const results = await conn.query('INSERT INTO users SET ?', user)
     res.json({
       message: 'insert user successfully',
       data: results[0]
