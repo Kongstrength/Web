@@ -55,6 +55,7 @@ const submitData = async () => {
         
     }
     console.log('submit Data', userData);
+    /*
         const errors = validateData(userData);
         if(errors.length > 0){
             //มี error เกิดขึ้น
@@ -63,6 +64,7 @@ const submitData = async () => {
                 errors: errors
             }
         }
+        */
         const response = await axios.post('http://localhost:8000/users', userData);
         console.log('response', response.data);
 
@@ -71,10 +73,13 @@ const submitData = async () => {
     } catch(error) {
         console.log('error', error.message);
         console.log('error',error.errors)//เช็คว่ามี error หรือไม่
-        /*if(error.response){
+
+        if(error.response){
             console.log( error.response.data.message);
+            error.message = error.response.data.message
+            error.errors = error.response.data.errors
         }
-        */
+        //แสดง error ที่เกิดขึ้นจากหลังบ้าน
        let htmlData ='<div>'
        htmlData += `<div>${error.message}</div>`
        htmlData += '<ul>'
