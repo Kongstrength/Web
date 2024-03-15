@@ -9,7 +9,7 @@ window.onload = async () => {
     if (id) {
         mode = "EDIT";
         selectedId = id;
-
+        console.log('id', id)
         // 1. ดึงข้อมูล user เก่าออกมาก่อน
         try {
             const response = await axios.get(`${BASE_URL}/users/${id}`);
@@ -110,7 +110,7 @@ const submitData = async () => {
         if (mode == "CREATE") {
             const response = await axios.post(`${BASE_URL}/users`, userData)
             console.log('response', response.data)
-        } else {
+        } else { //http://localhost:8000/users/14
             const response = await axios.put(`${BASE_URL}/users/${selectedId}`, userData)
             message = "แก้ไขข้อมูลเรียบร้อย";
             console.log('response', response.data)
