@@ -71,7 +71,7 @@ app.post('/users', async (req, res) => {
     const errors = validateData(user)
     if (errors.length > 0) {
       throw {
-        message: "กรอกข้อมูลไม่ครบถ้วน",
+        message: "กรอกข้อมูลไม่นะจ๊ะ",
         errors: errors
       }
     }

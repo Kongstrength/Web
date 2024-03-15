@@ -1,6 +1,6 @@
 const BASE_URL = 'http://localhost:8000'
 
-let mode = "CREATE" // default mode
+let mode = "CREATE" // default mode IS cREATE
 let selectedId = "";
 
 window.onload = async () => {
@@ -101,7 +101,7 @@ const submitData = async () => {
         if (errors.length > 0) {
             //มี error เกิดขึ้น
             throw {
-                message: "กรอกข้อมูลไม่ครบถ้วน",
+                message: "กรอกข้อมูลไม่ครบถ้วนนะจ๊ะ",
                 errors: errors
             }
         }
